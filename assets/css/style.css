@@ -1,18 +1,23 @@
+/* Variables */
 :root {
   --dark-radial-bg: radial-gradient(#666666 40%, #2d2d2d);
   --light-linear-bg: linear-gradient(#fffffff6, #dbdbdbaf);
 }
 
+/* Universal Font */
 * {
   font-family: 'Helvetica', sans-serif;
 }
 
+
 body {
+  /* Sets background for entire page */
   height: 100%;
   background-image: var(--dark-radial-bg);
   background-repeat: no-repeat;
 }
 
+/* HEADER */
 h1 {
   font-family: 'Palatino', serif;
   font-size: 300%;
@@ -33,6 +38,12 @@ nav ul {
   list-style-type: none;
 }
 
+nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
 .nav-links {
   display: inline-block;
   margin: 0 20px 0 20px;
@@ -44,15 +55,8 @@ a:visited {
   color: white;
 }
 
-
-nav {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: right;
-}
-
 .content-card {
+  /* Creates style of each section box */
   width: 98%;
   padding: 5px;
   margin: 10px 0 30px 0;
@@ -62,21 +66,25 @@ nav {
   box-shadow: 8px 8px 7px 6px #191919;
 }
 
-#about-me-section {
-  height: 300px;
+/* PROJECT CARDS */
+.feature-project-card {
+  display: flex;
+  justify-content: center;
 }
 
-.contact-info a:link,
-.contact-info a:visited {
-  color: black;
-}
-
-.big-image {
+.feature-image {
   height: 700px;
 }
 
+.small-project-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .smaller-image {
-  height: 600px;
+  height: 400px;
 }
 
 figure {
@@ -105,15 +113,16 @@ figcaption {
   border-radius: 0 0 10px 10px;
 }
 
-.project-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+/* CONTACT INFO */
+.contact-info a:link,
+.contact-info a:visited {
+  color: black;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 600px) {
-  .big-image {
+  /* Makes projects smaller and makes nav links block elements on small screens */
+  .feature-image {
     height: 450px;
   }
   .smaller-image {
