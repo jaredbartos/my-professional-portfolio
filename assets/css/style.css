@@ -66,25 +66,42 @@ a:visited {
   box-shadow: 8px 8px 7px 6px #191919;
 }
 
-/* PROJECT CARDS */
-.feature-project-card {
+.flex {
   display: flex;
-  justify-content: center;
-}
-
-.feature-image {
-  height: 700px;
-}
-
-.small-project-cards {
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
-.smaller-image {
-  height: 400px;
+.align-items-center {
+  align-items: center;
+}
+
+#about-me-section img {
+  width: 20%;
+  margin: 0 20px 20px 0;
+}
+
+#about-me-section p {
+  width: 75%;
+  margin: 0;
+  font-size: 150%;
+  line-height: 2;
+}
+
+/* PROJECT CARDS */
+.feature-project {
+  /* Sets top project to dominate the first row */
+  width: 100%; 
+}
+
+.smaller-project {
+  /* Causes rest of project cards to line up underneath top project */
+  width: 20%;
+}
+
+.feature-project img,
+.smaller-project img {
+  /* Screenshots of projects need to fill parent */
+  width: 100%;
 }
 
 figure {
@@ -119,17 +136,42 @@ figcaption {
   color: black;
 }
 
+.contact-info li {
+  list-style-type: none;
+  display: inline-block;
+  font-size: 125%;
+  margin: 0 50px 0 0;
+}
+
+/* FOOTER */
+footer {
+  color: white;
+  text-align: center;
+}
+
 /* MEDIA QUERIES */
-@media (max-width: 600px) {
-  /* Makes projects smaller and makes nav links block elements on small screens */
-  .feature-image {
-    height: 450px;
+@media screen and (max-width: 1000px) {
+  .smaller-project {
+    width: 33%;
   }
-  .smaller-image {
-    height: 350px;
+  #about-me-section p {
+    font-size: 100%;
   }
-  .nav-links {
+}
+
+@media screen and (max-width: 700px) {
+  .smaller-project {
+    width: 50%;
+  }
+  #about-me-section img {
+    width: 30%;
+  }
+  #about-me-section p {
+    width: 95%;
+  }
+  .nav-links,
+  .contact-info li {
     display: block;
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
   }
 }
