@@ -175,3 +175,16 @@ footer {
     margin: 0 0 20px 0;
   }
 }
+
+@media (hover: hover) {
+  .project img {
+    /* Adds cloudy appearance to projects before hover effect */
+    opacity: .5;
+  }
+  
+  .project img:hover {
+    /* Creates brighten effect on hover */
+    opacity: 1;
+    transition: .3s ease-in-out;
+  }
+}
